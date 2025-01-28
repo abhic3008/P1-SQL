@@ -24,7 +24,8 @@ limit 3
 
 
 
-/* Q4-  Which city has the best customers? We would like to throw a promotional music festival in the city we made the most money. Write a code that returns one city that has the highest sum of invoice totals. Return both the city name and the sum of all invoice totals? */
+/* Q4-  Which city has the best customers? We would like to throw a promotional music festival in the city we made the most money.
+	Write a code that returns one city that has the highest sum of invoice totals. Return both the city name and the sum of all invoice totals? */
 
 select sum(total) as sumtotal, billing_city  from invoice
 group by billing_city
@@ -47,7 +48,8 @@ limit 1
 
 
 
-/* Q2-  Write query to return the email, first name, last name, & Genre of all Rock Music listeners. Return your list ordered alphabetically by email starting with A. */
+/* Q2-  Write query to return the email, first name, last name, & Genre of all Rock Music listeners.
+	Return your list ordered alphabetically by email starting with A. */
 
 select distinct email, first_name, last_name
 from customer
@@ -65,7 +67,8 @@ order by email
 
 
 
-/* Q3-  Let's invite the artists who have written the most rock music in our dataset. Write a query that returns the Artist name and total track count of the top 10 rock bands. */
+/* Q3-  Let's invite the artists who have written the most rock music in our dataset. 
+	Write a query that returns the Artist name and total track count of the top 10 rock bands. */
 
 select artist.artist_Id, artist.name, count(track.album_Id) as no_of_songs
 from track
@@ -117,7 +120,9 @@ order by 5 desc
 
 
 
-/* Q2--  Write a query that determines the customer that has spent the most on music for each country. Write a query that returns the country along with the top customer and how much they spent. For countries where the top amount spent is shared, provide all customers who spent this amount. */
+/* Q2--  Write a query that determines the customer that has spent the most on music for each country. 
+	 Write a query that returns the country along with the top customer and how much they spent. 
+	 For countries where the top amount spent is shared, provide all customers who spent this amount. */
 
 with customer_country as
 (
