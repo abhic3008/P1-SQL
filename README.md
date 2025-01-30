@@ -1,1 +1,1 @@
-# P1-SQL-PowerBI
+# P1-SQL
